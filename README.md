@@ -1,6 +1,10 @@
 # 🎓 Workshop API & Postman
 
-Workshop สอน API และ Postman พร้อม Hands-on!
+> 📚 **สื่อการสอนเกี่ยวกับ API และ Postman** – เหมาะสำหรับผู้เริ่มต้นเรียนรู้การทำงานกับ REST API
+> 
+> 🤖 **Built with AI** – โปรเจกต์นี้สร้างโดย AI (Gemini) เพื่อสาธิตการใช้งาน API
+
+---
 
 ## 📁 โครงสร้าง
 
@@ -45,7 +49,7 @@ docker-compose up -d --build
 
 ---
 
-## � วิธี Import Postman
+## 📮 วิธี Import Postman
 
 ### 1. Import Collection
 
@@ -69,7 +73,20 @@ docker-compose up -d --build
 
 ---
 
-## �🔧 Tech Stack
+## 🔧 Tech Stack
 
 - **Backend**: Python 3.13 + FastAPI + Redis
-- **Frontend**: React + Vite + Tailwind CSS
+- **Frontend**: React + Vite + Tailwind CSS v4
+- **Container**: Docker + Docker Compose
+
+---
+
+## 📜 License
+
+MIT License - ใช้เพื่อการศึกษาได้อย่างอิสระ
+
+---
+
+<p align="center">
+  Made with ❤️ by <a href="https://instagram.com/ping.p_">@ping.p_</a> + 🤖 AI
+</p>
