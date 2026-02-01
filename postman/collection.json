@@ -1,0 +1,165 @@
+{
+    "info": {
+        "name": "Workshop API",
+        "_postman_id": "workshop-api-collection",
+        "description": "Collection สำหรับ Workshop API & Postman\n\n## วิธีใช้\n1. Import Collection นี้\n2. Import Environment\n3. เลือก Environment \"Workshop API\"\n4. ทดสอบ API ได้เลย!",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "📦 CRUD Items (Participant)",
+            "description": "ฝึก CRUD Operations กับ API ของน้องๆ",
+            "item": [
+                {
+                    "name": "1. CREATE - สร้าง Item",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"name\": \"My First Item\",\n  \"description\": \"Hello Workshop!\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{local_endpoint}}/items",
+                            "host": [
+                                "{{local_endpoint}}"
+                            ],
+                            "path": [
+                                "items"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "2. READ - ดูทั้งหมด",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{local_endpoint}}/items",
+                            "host": [
+                                "{{local_endpoint}}"
+                            ],
+                            "path": [
+                                "items"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "3. READ - ดูตาม ID",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{local_endpoint}}/items/{{item_id}}",
+                            "host": [
+                                "{{local_endpoint}}"
+                            ],
+                            "path": [
+                                "items",
+                                "{{item_id}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "4. UPDATE - แก้ไข",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"name\": \"Updated Item\",\n  \"description\": \"Changed!\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{local_endpoint}}/items/{{item_id}}",
+                            "host": [
+                                "{{local_endpoint}}"
+                            ],
+                            "path": [
+                                "items",
+                                "{{item_id}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "5. DELETE - ลบ",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "{{local_endpoint}}/items/{{item_id}}",
+                            "host": [
+                                "{{local_endpoint}}"
+                            ],
+                            "path": [
+                                "items",
+                                "{{item_id}}"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "📝 Register (Instructor)",
+            "description": "ลงทะเบียนเข้าร่วม Workshop",
+            "item": [
+                {
+                    "name": "Register - ลงทะเบียน",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"name\": \"ชื่อของคุณ\",\n  \"note\": \"สวัสดีครับ!\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{target_endpoint}}/register",
+                            "host": [
+                                "{{target_endpoint}}"
+                            ],
+                            "path": [
+                                "register"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Check - เช็คว่าลงทะเบียนหรือยัง",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{target_endpoint}}/check/{{my_name}}",
+                            "host": [
+                                "{{target_endpoint}}"
+                            ],
+                            "path": [
+                                "check",
+                                "{{my_name}}"
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
