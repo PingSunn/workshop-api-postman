@@ -1,4 +1,4 @@
-# 🎓 Workshop API & Postman
+# 🎓 Workshop API by PingSunn
 
 > 📚 **สื่อการสอนเกี่ยวกับ API และ Postman** – เหมาะสำหรับผู้เริ่มต้นเรียนรู้การทำงานกับ REST API
 > 
@@ -51,21 +51,24 @@ docker-compose up -d --build
 
 ## 📮 วิธี Import Postman
 
-### 1. Import Collection
+### 1. Import Collection & Environment
 
 1. เปิด Postman → Click **Import** (หรือ Ctrl+O)
-2. ลาก `postman/collection.json` ไปวาง
-3. หรือ Click **Upload Files** → เลือกไฟล์
+2. ลาก 2 ไฟล์นี้ไปวาง:
+   - `postman/collection.json`
+   - `postman/environment.json`
 
-### 2. Import Environment
-
-1. Click **Import** อีกครั้ง
-2. ลาก `postman/participant.postman_environment.json` ไปวาง
-
-### 3. เลือก Environment
+### 2. เลือก Environment
 
 1. มุมขวาบน → Click dropdown **"No Environment"**
-2. เลือก **"Participant (Port 8000)"**
+2. เลือก **"Workshop API by PingSunn"**
+
+### 3. ตั้งค่า Environment Variables
+
+| Variable | Value | ใช้กับ |
+|----------|-------|--------|
+| `local_endpoint` | `http://localhost:8000` | CRUD Items (Participant) |
+| `target_endpoint` | `http://<IP ผู้สอน>:8001` | Register (Instructor) |
 
 ### 4. ทดสอบ!
 

@@ -1,6 +1,6 @@
 {
     "info": {
-        "name": "Workshop API",
+        "name": "Workshop API by PingSunn",
         "_postman_id": "workshop-api-collection",
         "description": "Collection สำหรับ Workshop API & Postman\n\n## วิธีใช้\n1. Import Collection นี้\n2. Import Environment\n3. เลือก Environment \"Workshop API\"\n4. ทดสอบ API ได้เลย!",
         "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
