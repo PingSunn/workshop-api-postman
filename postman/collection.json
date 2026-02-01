@@ -2,16 +2,16 @@
     "info": {
         "name": "Workshop API by PingSunn",
         "_postman_id": "workshop-api-collection",
-        "description": "Collection สำหรับ Workshop API & Postman\n\n## วิธีใช้\n1. Import Collection นี้\n2. Import Environment\n3. เลือก Environment \"Workshop API\"\n4. ทดสอบ API ได้เลย!",
+        "description": "Collection for Workshop API & Postman\n\n## How to use\n1. Import this Collection\n2. Import Environment\n3. Select Environment \"Workshop API by PingSunn\"\n4. Test API now!",
         "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
     },
     "item": [
         {
             "name": "📦 CRUD Items (Participant)",
-            "description": "ฝึก CRUD Operations กับ API ของน้องๆ",
+            "description": "Practice CRUD Operations with Participant API",
             "item": [
                 {
-                    "name": "1. CREATE - สร้าง Item",
+                    "name": "1. CREATE - Create Item",
                     "request": {
                         "method": "POST",
                         "header": [
@@ -36,7 +36,7 @@
                     }
                 },
                 {
-                    "name": "2. READ - ดูทั้งหมด",
+                    "name": "2. READ - Get All",
                     "request": {
                         "method": "GET",
                         "header": [],
@@ -52,24 +52,24 @@
                     }
                 },
                 {
-                    "name": "3. READ - ดูตาม ID",
+                    "name": "3. READ - Get by ID",
                     "request": {
                         "method": "GET",
                         "header": [],
                         "url": {
-                            "raw": "{{local_endpoint}}/items/{{item_id}}",
+                            "raw": "{{local_endpoint}}/items/1",
                             "host": [
                                 "{{local_endpoint}}"
                             ],
                             "path": [
                                 "items",
-                                "{{item_id}}"
+                                "1"
                             ]
                         }
                     }
                 },
                 {
-                    "name": "4. UPDATE - แก้ไข",
+                    "name": "4. UPDATE - Update Item",
                     "request": {
                         "method": "PUT",
                         "header": [
@@ -83,30 +83,30 @@
                             "raw": "{\n  \"name\": \"Updated Item\",\n  \"description\": \"Changed!\"\n}"
                         },
                         "url": {
-                            "raw": "{{local_endpoint}}/items/{{item_id}}",
+                            "raw": "{{local_endpoint}}/items/1",
                             "host": [
                                 "{{local_endpoint}}"
                             ],
                             "path": [
                                 "items",
-                                "{{item_id}}"
+                                "1"
                             ]
                         }
                     }
                 },
                 {
-                    "name": "5. DELETE - ลบ",
+                    "name": "5. DELETE - Delete Item",
                     "request": {
                         "method": "DELETE",
                         "header": [],
                         "url": {
-                            "raw": "{{local_endpoint}}/items/{{item_id}}",
+                            "raw": "{{local_endpoint}}/items/1",
                             "host": [
                                 "{{local_endpoint}}"
                             ],
                             "path": [
                                 "items",
-                                "{{item_id}}"
+                                "1"
                             ]
                         }
                     }
@@ -115,10 +115,10 @@
         },
         {
             "name": "📝 Register (Instructor)",
-            "description": "ลงทะเบียนเข้าร่วม Workshop",
+            "description": "Register for Workshop",
             "item": [
                 {
-                    "name": "Register - ลงทะเบียน",
+                    "name": "Register - New Registration",
                     "request": {
                         "method": "POST",
                         "header": [
@@ -129,7 +129,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n  \"name\": \"ชื่อของคุณ\",\n  \"note\": \"สวัสดีครับ!\"\n}"
+                            "raw": "{\n  \"name\": \"Your Name\",\n  \"note\": \"Hello World!\"\n}"
                         },
                         "url": {
                             "raw": "{{target_endpoint}}/register",
@@ -143,18 +143,18 @@
                     }
                 },
                 {
-                    "name": "Check - เช็คว่าลงทะเบียนหรือยัง",
+                    "name": "Check - Check Registration",
                     "request": {
                         "method": "GET",
                         "header": [],
                         "url": {
-                            "raw": "{{target_endpoint}}/check/{{my_name}}",
+                            "raw": "{{target_endpoint}}/check/Your Name",
                             "host": [
                                 "{{target_endpoint}}"
                             ],
                             "path": [
                                 "check",
-                                "{{my_name}}"
+                                "Your Name"
                             ]
                         }
                     }

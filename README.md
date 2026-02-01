@@ -49,30 +49,30 @@ docker-compose up -d --build
 
 ---
 
-## 📮 วิธี Import Postman
+## 📮 How to Import Postman
 
 ### 1. Import Collection & Environment
 
-1. เปิด Postman → Click **Import** (หรือ Ctrl+O)
-2. ลาก 2 ไฟล์นี้ไปวาง:
+1. Open Postman → Click **Import** (or Ctrl+O)
+2. Drag and drop these 2 files:
    - `postman/collection.json`
    - `postman/environment.json`
 
-### 2. เลือก Environment
+### 2. Select Environment
 
-1. มุมขวาบน → Click dropdown **"No Environment"**
-2. เลือก **"Workshop API by PingSunn"**
+1. Top right corner → Click dropdown **"No Environment"**
+2. Select **"Workshop API by PingSunn"**
 
-### 3. ตั้งค่า Environment Variables
+### 3. Setup Environment Variables
 
-| Variable | Value | ใช้กับ |
+| Variable | Value | Usage |
 |----------|-------|--------|
 | `local_endpoint` | `http://localhost:8000` | CRUD Items (Participant) |
-| `target_endpoint` | `http://<IP ผู้สอน>:8001` | Register (Instructor) |
+| `target_endpoint` | `http://<Instructor IP>:8001` | Register (Instructor) |
 
-### 4. ทดสอบ!
+### 4. Test it!
 
-เลือก request แล้วกด **Send** ได้เลย 🚀
+Select a request and click **Send**! 🚀
 
 ---
 
